@@ -1,0 +1,6 @@
+.env
+/public/video/*.mp4
+*.log
+*.exe
+
+recserver

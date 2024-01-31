@@ -13,7 +13,7 @@ function videoTemplate(file) {
     return `
     <div class="col-span-1" >
         <div class="max-w-sm rounded-custom bg-white border border-gray-200 rounded-lg shadow-smooth overflow-hidden dark:bg-gray-800 dark:border-gray-700">
-                <video class="h-40 lazy" controls playsinline muted preload="metadata" poster="/public/image/placeholder.png">
+                <video class="h-40 lazy w-full" controls playsinline muted preload="metadata" poster="/public/image/placeholder.png">
                     <source src="/public/video/${file}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>

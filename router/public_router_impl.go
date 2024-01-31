@@ -22,6 +22,10 @@ func NewRouters(app *fiber.App) PublicRouters {
 }
 
 func (r PublicRoutersImpl) Setup() {
+	r.App.Get("/", func(c *fiber.Ctx) error {
+		return c.Redirect("/video/report", fiber.StatusFound)
+	})
+
 	recSvc := rec_svc.NewVideoRecordService()
 	recCtr := rec_ctr.NewVideoRecController(recSvc)
 	rec_router.SetupVideoRecordRoutes(r.App, recCtr)
